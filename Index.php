@@ -1,3 +1,28 @@
+<?php
+
+  $servername = getenv('IP');
+  $username = getenv('C9_USER');
+  $password = "";
+  $database = "c9";
+  $dbport = 3306;
+  
+  // Create connection
+  $db = new mysqli($servername, $username, $password, $database, $dbport);
+  
+  // Check connection
+  if ($db->connect_error) {
+      die("Connection failed: " . $db->connect_error);
+  } 
+  echo "Connected successfully (".$db->host_info.")";
+  
+  //And now to perform a simple query to make sure it's working
+  $query = "SELECT * FROM users";
+  $result = mysqli_query($db, $query);
+
+  
+?>
+
+
 <!DOCTYPE html>
   <html>
     <head>
@@ -22,9 +47,15 @@
           </ul>
         </nav>
         <section data-editable data-name="section">
-          <p>
-          Agency Insights does some stuff. Read more to read about the stuff.
-          </p>
+          
+          
+          <?php
+          
+            while($row = $result->fetch_assoc()){
+              echo "<p>My name is:   " .$row['name']. ".</p>";
+            }
+          ?>
+          
         </section>
     <script src="js/content-tools.min.js"></script>
     <script src="js/app.js"></script>
