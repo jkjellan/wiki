@@ -1,0 +1,15 @@
+[27-Jan-2016 01:49:09 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/php/display_query.php on line 2
+[27-Jan-2016 01:49:09 UTC] PHP Stack trace:
+[27-Jan-2016 01:49:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/php/display_query.php:0
+[27-Jan-2016 01:49:36 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/php/display_query.php on line 2
+[27-Jan-2016 01:49:36 UTC] PHP Stack trace:
+[27-Jan-2016 01:49:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php/display_query.php:0
+[27-Jan-2016 01:50:10 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/php/display_query.php on line 2
+[27-Jan-2016 01:50:10 UTC] PHP Stack trace:
+[27-Jan-2016 01:50:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/php/display_query.php:0
+[27-Jan-2016 01:50:43 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/php/display_query.php on line 2
+[27-Jan-2016 01:50:43 UTC] PHP Stack trace:
+[27-Jan-2016 01:50:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/php/display_query.php:0
+[27-Jan-2016 01:51:53 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/php/display_query.php on line 2
+[27-Jan-2016 01:51:53 UTC] PHP Stack trace:
+[27-Jan-2016 01:51:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/php/display_query.php:0

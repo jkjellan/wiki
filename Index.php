@@ -1,27 +1,7 @@
 <?php
-
-  $servername = getenv('IP');
-  $username = getenv('C9_USER');
-  $password = "";
-  $database = "c9";
-  $dbport = 3306;
-  
-  // Create connection
-  $db = new mysqli($servername, $username, $password, $database, $dbport);
-  
-  // Check connection
-  if ($db->connect_error) {
-      die("Connection failed: " . $db->connect_error);
-  } 
-  echo "Connected successfully (".$db->host_info.")";
-  
-  //And now to perform a simple query to make sure it's working
-  $query = "SELECT * FROM users";
-  $result = mysqli_query($db, $query);
-
-  
+  require 'php/connect.php';
+  require 'php/query.php';
 ?>
-
 
 <!DOCTYPE html>
   <html>
@@ -31,7 +11,11 @@
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
       <title>Agency Insights</title>
 
-    <link rel="stylesheet" type="text/css" href="css/content-tools.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/content-tools.min.css" />
+      
+      <script language="JavaScript" src="js/show_input.js"></script>
+      <script src="js/content-tools.min.js"></script>
+      <script src="js/app.js"></script>
 
     </head>
     <body>
@@ -40,24 +24,29 @@
           Agency Insights
         </h1>
       </header>
-        <nav>
-          <ul>
-            <a href="Expense.html"><li>Expense</li></a>
-            <a href="Onboarding.html"><li>Onboarding</li></a>
-          </ul>
-        </nav>
-        <section data-editable data-name="section">
+      <nav>
+        <ul>
+          <a href="Expense.html"><li>Expense</li></a>
+          <a href="Onboarding.html"><li>Onboarding</li></a>
+        </ul>
+      </nav>
+      <section data-editable data-name="section">
+        
+        <form>
+          First name:<br>
+          <input type="text" name="firstname" value="" id="user_input_first">
+          <br>
+          Last name:<br>
+          <input type="text" name="lastname" value="" id = "user_input_last">
+          <br><br>
+          <input type="submit" value="Submit" onclick="return showInput();"><br>
+        </form> 
+
+        <p id = 'display'> </p>
+
+        <?php require 'php/display_query.php';?>
           
-          
-          <?php
-          
-            while($row = $result->fetch_assoc()){
-              echo "<p>My name is:   " .$row['name']. ".</p>";
-            }
-          ?>
-          
-        </section>
-    <script src="js/content-tools.min.js"></script>
-    <script src="js/app.js"></script>
+      </section>
+    
     </body>
   </html>
