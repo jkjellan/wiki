@@ -13,7 +13,6 @@ $query = mysqli_query($db,$sql);
 
 $row = mysqli_fetch_assoc($query);
 echo "$post" . "'s " . "favorite food is: " . $row["food"];
-
 //printf ("$post"&"'s "&"favorite food is: %s\n",$row["food"]);
 
 
