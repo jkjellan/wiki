@@ -1,7 +1,9 @@
 function showInput()
       {
-      var message_entered =  document.getElementById("user_input_last").value;
-  
-      document.getElementById('display').innerHTML = message_entered;
-      return false;
+      var text1_entered =  document.getElementById("username").value;
+      var text2_entered = document.getElementById("name").value;
+      
+      document.getElementById('display').innerHTML = text1_entered + " " + text2_entered;
+      
+      
       }

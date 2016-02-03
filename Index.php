@@ -1,8 +1,3 @@
-<?php
-  require 'php/connect.php';
-  require 'php/query.php';
-?>
-
 <!DOCTYPE html>
   <html>
     <head>
@@ -16,7 +11,8 @@
       <script language="JavaScript" src="js/show_input.js"></script>
       <script src="js/content-tools.min.js"></script>
       <script src="js/app.js"></script>
-
+      <!--<script language="JavaScript" src="js/show_input.js"></script>-->
+      
     </head>
     <body>
       <header data-editable data-name="header">
@@ -30,21 +26,25 @@
           <a href="Onboarding.html"><li>Onboarding</li></a>
         </ul>
       </nav>
+      
       <section data-editable data-name="section">
-        
         <form>
-          First name:<br>
-          <input type="text" name="firstname" value="" id="user_input_first">
-          <br>
-          Last name:<br>
-          <input type="text" name="lastname" value="" id = "user_input_last">
+          Name:<br>
+          <input type="text" id="name">
           <br><br>
-          <input type="submit" value="Submit" onclick="return showInput();"><br>
-        </form> 
+          <input type ="submit" id="name-submit">
+          <br><br>
+          <div id="name-data"></div>
+        </form>
+      </section>
+    
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="js/global.js"></script>
+        
+        <!--<p id = 'display'> </p>-->
 
-        <p id = 'display'> </p>
-
-        <?php require 'php/display_query.php';?>
+        
           
       </section>
     
